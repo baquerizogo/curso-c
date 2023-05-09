@@ -1,16 +1,23 @@
 #include <iostream>
+using namespace std;
 
 class Human {
     public:
-        std::string name;
-        std::string occupation;
+        string name;
+        string occupation;
         int age;
 
+        Human (string Name, string Occupation, int Age) {
+            name = Name;
+            occupation = Occupation;
+            age = Age;   
+        }
+
         void eat () {
-            std::cout << "This human is eating" << std::endl;
+            cout << name << " is eating" << endl;
         };
         void drink () {
-            std::cout << "This human is drinking" << std::endl;
+            cout << name << " is drinking" << endl;
         }
 };
 
@@ -18,11 +25,7 @@ int main () {
     // Object = A collection of attributes and methods.
     //          Created from a class which acts as "blue-print"
     
-    Human human1;
-
-    human1.name = "Rick";
-    human1.occupation = "scientist";
-    human1.age = 70;
+    Human human1("Jose", "Dev", 23);
 
     std::cout << human1.name << std::endl;
     std::cout << human1.occupation << std::endl;
